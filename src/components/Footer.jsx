@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       {isOpen ? (
-        <Order closeHour={closeHour} />
+        <Order closeHour={closeHour} openHour={openHour} />
       ) : (
         <p className="closed">
           We're closed. Come visit us between {openHour}:00 and {closeHour}:00

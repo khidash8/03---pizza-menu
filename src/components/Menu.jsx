@@ -12,15 +12,20 @@ const Menu = () => {
       <h2>Our Fuckin Menu!!</h2>
 
       {/* check if there are pizzas in data */}
-
       {pizzaDataLenth <= 0 ? (
         <p>No pizzas available</p>
       ) : (
-        <ul className="pizzas">
-          {pizzas.map((pizza) => (
-            <Pizza key={pizza.name} pizzaObj={pizza} />
-          ))}
-        </ul>
+        <>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas,
+            officiis deserunt. Cumque modi delectus rerum.
+          </p>
+          <ul className="pizzas">
+            {pizzas.map((pizza) => (
+              <Pizza key={pizza.name} pizzaObj={pizza} />
+            ))}
+          </ul>
+        </>
       )}
     </main>
   );
