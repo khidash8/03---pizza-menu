@@ -102,7 +102,7 @@ body {
 .pizzas {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 4.8rem;
 }
 
@@ -156,8 +156,9 @@ body {
   font-size: 1.4rem;
   position: absolute;
   bottom: 0;
-  width: 80%;
-  text-align: center;
+  width: 100%;
+  text-align: start;
+  margin-bottom: 1rem;
 }
 
 .order {

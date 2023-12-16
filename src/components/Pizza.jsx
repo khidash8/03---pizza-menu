@@ -1,12 +1,15 @@
 import React from "react";
 
-const Pizza = () => {
+const Pizza = (props) => {
   return (
-    <div className="pizza">
-      <img src="assets/pizzas/spinaci.jpg" alt="spinachi pizza" />
-      <h3>Pizza Pepparoni</h3>
-      <p>Pepparoni, Mozzarella, Tomatoes, Salami, Onion, Pepper</p>
-    </div>
+    <li className="pizza">
+      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
+      <div>
+        <h3>{props.pizzaObj.name}</h3>
+        <p>{props.pizzaObj.ingredients}</p>
+        <span>{props.pizzaObj.price}</span>
+      </div>
+    </li>
   );
 };
 

@@ -5,8 +5,13 @@ import Menu from "./components/Menu";
 const App = () => {
   return (
     <>
+      {/* Header */}
       <Header />
+
+      {/* Menu */}
       <Menu />
+
+      {/* Footer */}
       <Footer />
     </>
   );

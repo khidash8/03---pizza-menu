@@ -1,16 +1,27 @@
 import React from "react";
 import Pizza from "./Pizza";
+import pizzaData from "../Data/data";
 
 const Menu = () => {
+  let pizzas = pizzaData;
+  // pizzas = [];
+  const pizzaDataLenth = pizzas.length;
+
   return (
     <main className="menu">
       <h2>Our Fuckin Menu!!</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
+
+      {/* check if there are pizzas in data */}
+
+      {pizzaDataLenth <= 0 ? (
+        <p>No pizzas available</p>
+      ) : (
+        <ul className="pizzas">
+          {pizzas.map((pizza) => (
+            <Pizza key={pizza.name} pizzaObj={pizza} />
+          ))}
+        </ul>
+      )}
     </main>
   );
 };
